@@ -45,4 +45,10 @@ public class DriverController {
 		return driverService.downloadFile(filename);
 
 	}
+	
+	@GetMapping("profile/{driverId}")
+	public Driver getDriver(@PathVariable("driverId") Long id) {
+		return driverService.getDriver(id);
+		
+	}
 }

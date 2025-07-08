@@ -68,6 +68,12 @@ public class DriverService {
 	                .header("Content-Disposition", "attachment; filename=\"" + filename + "\"")
 	                .body(fileBytes);
 	}
+
+
+	public Driver getDriver(Long id) {
+		
+		return driverRepository.findById(id).orElse(null);
+	}
 	  
 
 
